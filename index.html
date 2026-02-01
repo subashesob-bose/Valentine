@@ -11,11 +11,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: url("https://images.unsplash.com/photo-1508747703725-719777637510") no-repeat center center/cover;
+        background: url("https://www.dreamstime.com/stock-photo-sunflowers-sunset-field-illuminated-as-sun-sets-behind-rocky-mountains-colorado-image76261742")
+        no-repeat center center / cover;
     }
 
     .card {
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.88);
         padding: 30px;
         border-radius: 20px;
         text-align: center;
@@ -51,13 +52,25 @@
         background-color: #ccc;
         position: absolute;
     }
+
+    /* ❤️ Heart animation */
+    .heart {
+        width: 150px;
+        animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
 </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>🌻 HER_NAME_HERE 🌻</h1>
-    <p>Will you be my Valentine? 💛</p>
+    <h1>🌻 Oii Vidhu 🌻</h1>
+    <p>Enna Marriage Pannikuraya? 💛</p>
     <button id="yes" onclick="yesClicked()">Yes 💕</button>
     <button id="no" onmouseover="moveNo()">No 🙈</button>
 </div>
@@ -65,11 +78,28 @@
 <script>
 function yesClicked() {
     document.body.innerHTML = `
-        <div style="height:100vh;display:flex;align-items:center;justify-content:center;
-        background:url('https://images.unsplash.com/photo-1508747703725-719777637510') center/cover;">
-            <h1 style="background:rgba(255,255,255,0.9);
-            padding:30px;border-radius:20px;color:#ff9800;">
-            Yayyy! 💛🌻<br>I'm the happiest person alive 😍
+        <div style="
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        background:url('https://www.dreamstime.com/stock-photo-sunflowers-sunset-field-illuminated-as-sun-sets-behind-rocky-mountains-colorado-image76261742')
+        center/cover;
+        text-align:center;">
+        
+            <img class="heart"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Heart_symbol_red.svg/512px-Heart_symbol_red.svg.png"
+            alt="Heart">
+            
+            <h1 style="
+            background:rgba(255,255,255,0.9);
+            padding:25px;
+            border-radius:20px;
+            color:#ff9800;
+            margin-top:20px;">
+            Yayyy! 💛🌻<br>
+            You made my heart smile ❤️
             </h1>
         </div>
     `;
